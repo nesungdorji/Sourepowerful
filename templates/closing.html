@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Record</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Credit Record</h1>
+    <form action="{{ url_for('credit_record') }}" method="POST">
+        <label>Citizen ID:</label>
+        <input type="text" name="citizen_id" required><br>
+        <label>Item Description:</label>
+        <input type="text" name="item_description" required><br>
+        <label>Item Code:</label>
+        <input type="text" name="item_code" required><br>
+        <label>Quantity:</label>
+        <input type="text" name="quantity" required><br>
+        <input type="submit" value="Add Credit">
+    </form>
+</body>
+</html>

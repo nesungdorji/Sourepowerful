@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Record</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Sales Record</h1>
+    <form action="{{ url_for('sales_record') }}" method="POST">
+        <label>Item Description:</label>
+        <input type="text" name="item_description" required><br>
+        <label>Item Code:</label>
+        <input type="text" name="item_code" required><br>
+        <label>Price:</label>
+        <input type="text" name="price" required><br>
+        <label>Quantity:</label>
+        <input type="text" name="quantity" required><br>
+        <input type="submit" value="Add Sale">
+    </form>
+</body>
+</html>

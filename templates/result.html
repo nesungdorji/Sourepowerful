@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Record Result</title>
+</head>
+<body>
+    <h1>Purchase Record Result</h1>
+    <table>
+        <tr>
+            <th>Item Number</th>
+            <th>Item Description</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+            <th>Rate</th>
+            <th>Purchase Amount</th>
+            <th>Markup Percentage</th>
+            <th>Price</th>
+            <th>Selling Amount</th>
+            <th>Profit</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.item_number }}</td>
+            <td>{{ item.item_description }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.unit }}</td>
+            <td>{{ item.rate }}</td>
+            <td>{{ item.purchase_amount }}</td>
+            <td>{{ item.markup_percentage }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.selling_amount }}</td>
+            <td>{{ item.profit }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Total Quantity: {{ total_quantity }}</p>
+    <p>Total Profit: {{ total_profit }}</p>
+</body>
+</html>

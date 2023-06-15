@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Home Page</h2>
+    <div class="button-container">
+        <a href="{{ url_for('purchase_record') }}" class="button" id="purchase_record" class="button">Purchase Record</a>
+        <a href="{{ url_for('sales_record') }}" class="button">Sales Record</a>
+        <a href="{{ url_for('credit_record') }}" class="button">Credit Record</a>
+        <a href="{{ url_for('monthly_closing') }}" class="button">Monthly Closing</a>
+        <a href="{{ url_for('weekly_closing') }}" class="button">Weekly Closing</a>
+        <a href="{{ url_for('yearly_closing') }}" class="button">Yearly Closing</a>
+    </div>
+</body>
+</html>
+

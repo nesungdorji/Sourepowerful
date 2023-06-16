@@ -1,5 +1,9 @@
-from flask import Flask, render_template, request, redirect, session
+from datetime import datetime
+from flask import Flask, render_template, request, redirect, session, jsonify
 import random
+
+def index():
+    return render_template('index.html')
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Set a secret key for session management
